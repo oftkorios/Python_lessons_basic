@@ -20,9 +20,12 @@ print(my_round(2.9999967, 5))
 # !!!P.S.: функция не должна НИЧЕГО print'ить
 
 def lucky_ticket(ticket_number):
-    pass
-
-
-print(lucky_ticket(123006))
-print(lucky_ticket(12321))
-print(lucky_ticket(436751))
+    number_tickets = str(ticket_number)
+    if len(number_tickets)< 6:
+        return ticket_number
+    first_part = int(number_tickets[0])+int(number_tickets[1])+int(number_tickets[2])
+    second_part = int(number_tickets[3]) + int(number_tickets[4]) + int(number_tickets[5])
+    if first_part == second_part:
+        return ticket_number
+    else:
+        return ticket_number
