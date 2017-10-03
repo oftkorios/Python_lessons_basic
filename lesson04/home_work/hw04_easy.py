@@ -16,7 +16,8 @@ print(b)
 
 a = ['яблоко', 'апельсин', 'киви','банан']
 b = ['яблоко', 'банан','ананас']
-print([x for x in a if x in set(b)])
+c = [x for x in a if x in set(b)]
+print(c)
 
 # Задание-3:
 # Дан список, заполненный произвольными числами.
@@ -24,3 +25,11 @@ print([x for x in a if x in set(b)])
 # + Элемент кратен 3
 # + Элемент положительный
 # + Элемент не кратен 4
+i = -100
+c= []
+while i<100:
+    c.append(i)
+    i+=1
+print(c)
+b = [x for x in c if x % 3 == 0 and x > 0 and x % 4 != 0]
+print(b)
