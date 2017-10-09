@@ -14,11 +14,14 @@
 # оформленные в виде соответствующих функций,
 # и импортированные в данный файл из easy.py
 
-print("Давай поработаем!")
-print("Выбери действие:")
-print(" 1. Перейти в папку")
-print(" 2. Просмотреть содержимое текущей папки")
-print(" 3. Удалить папку")
-print(" 4. Создать папку","\n")
-
-input()
+import easy
+import os
+easy.welcome_function()
+number = int(input("Выбери дейтвие: "))
+if number == 1:
+    path = input("Введи директорию: ")
+    if os.path.exists(path) == True:
+        os.chdir(path)
+    else:
+        print("Невозможно перейти!")
+    easy.welcome_function()
